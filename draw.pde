@@ -1,6 +1,6 @@
 
 void draw() {
-  
+    
   currentTime = millis();
   fi = float(currentTime - prevTime)/1000;
   prevTime = currentTime;
@@ -10,13 +10,13 @@ void draw() {
     init = true;
     startTime = currentTime;
 
-    arduino.digitalWrite(self_trig_out, Arduino.HIGH);
-    self_trig_state = 1;
-    self_trig_time = currentTime;
+    //arduino.digitalWrite(self_trig_out, Arduino.HIGH);
+    //self_trig_state = 1;
+    //self_trig_time = currentTime;
 
-    arduino.digitalWrite(trig_out, Arduino.HIGH);
-    trig_out_state = 1;
-    trig_out_time = currentTime;
+    //arduino.digitalWrite(trig_out, Arduino.HIGH);
+    //trig_out_state = 1;
+    //trig_out_time = currentTime;
     
   }
 
@@ -52,7 +52,6 @@ void draw() {
     }
     
     s = cur_speed*(circ*cf)*fi;    
-    
     if (probe_trials[repcount] == 1) {
       s = 0;
     }
@@ -63,21 +62,21 @@ void draw() {
   
   }
   
-  if (repcount >= nreps) {
-    arduino.digitalWrite(trig_out, Arduino.HIGH);
-    trig_out_state = 1;
-    trig_out_time = currentTime;
-    println("Experiment Complete!");
-  }
+  //if (repcount >= nreps) {
+  //  arduino.digitalWrite(trig_out, Arduino.HIGH);
+  //  trig_out_state = 1;
+  //  trig_out_time = currentTime;
+  //  println("Experiment Complete!");
+  //}
     
-  if (self_trig_state == 1 && currentTime - self_trig_time >= trig_out_dur) {
-    arduino.digitalWrite(self_trig_out, Arduino.LOW);
-    self_trig_state = 0;
-  }
+  //if (self_trig_state == 1 && currentTime - self_trig_time >= trig_out_dur) {
+  //  arduino.digitalWrite(self_trig_out, Arduino.LOW);
+  //  self_trig_state = 0;
+  //}
   
-  if (trig_out_state == 1 && currentTime - trig_out_time >= trig_out_dur) {
-    arduino.digitalWrite(trig_out, Arduino.LOW);
-    trig_out_state = 0;
-  }
+  //if (trig_out_state == 1 && currentTime - trig_out_time >= trig_out_dur) {
+  //  arduino.digitalWrite(trig_out, Arduino.LOW);
+  //  trig_out_state = 0;
+  //}
   
 }

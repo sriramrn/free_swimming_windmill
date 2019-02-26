@@ -5,7 +5,7 @@ boolean randomize = false; // randomize speed
 float[] randseed = {0.5,1,2};
 int[] randpos = {0,1};
 
-int nreps = 2;
+int nreps = 3;
 
 float probe_prob = 0.1; // probability of occurance of a probe trial
 float gain = 1; // primarily used to invert direction
@@ -30,17 +30,17 @@ void setup() {
   blocktime = arrCumSum(segmentduration);
   blocktime = arrUnitConvert(blocktime, 1000);
   
-  probe_trials = getTrials(probe_prob, nreps);
+  probe_trials = getTrials(probe_prob, nreps+1);
   
   //Arduino triggering
-  arduino = new Arduino(this, Arduino.list()[1], 115200);
+  //arduino = new Arduino(this, Arduino.list()[1], 115200);
   
-  arduino.pinMode(trig_pin, Arduino.INPUT); 
+  //arduino.pinMode(trig_pin, Arduino.INPUT); 
   
-  arduino.pinMode(trig_out, Arduino.OUTPUT);
-  arduino.digitalWrite(trig_out, Arduino.LOW);
+  //arduino.pinMode(trig_out, Arduino.OUTPUT);
+  //arduino.digitalWrite(trig_out, Arduino.LOW);
   
-  arduino.pinMode(self_trig_out, Arduino.OUTPUT);
-  arduino.digitalWrite(self_trig_out, Arduino.LOW);
+  //arduino.pinMode(self_trig_out, Arduino.OUTPUT);
+  //arduino.digitalWrite(self_trig_out, Arduino.LOW);
   
 }
