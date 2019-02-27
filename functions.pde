@@ -1,12 +1,12 @@
 
-void windmill(int[] center, int radius, float angle, int numbars, float barwidth, int background, int fill) {
+void windmill(int[] center, int radius, float angle, int numbars, float barwidth, int[] background, int[] fill) {
   
-  background(background);
+  background(background[0], background[1], background[2]);
   
   for (int i=0; i<numbars; i++) {
     angle+= 2*barwidth;
     int[] v = get_vertices(center,radius,angle,barwidth/2);
-    fill(fill);
+    fill(fill[0], fill[1], fill[2]);
     triangle(center[0],center[1],v[0],v[1],v[2],v[3]);
   }
   

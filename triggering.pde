@@ -19,7 +19,7 @@ int self_trig_out = 8;
 int self_trig_state = 0;
 int self_trig_time = 0;
 
-int initDelay = 10;  //time in seconds to wait for first trigger 
+int initDelay = 3;  //time in seconds to wait for first trigger 
 boolean init = false;
 int initTime = initDelay*1000;
 

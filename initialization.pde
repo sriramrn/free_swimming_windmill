@@ -2,7 +2,10 @@ int n = 24;
 
 float cf = 0.018; // cm per pixel
 float radius = 3; // radius of windmill in cm
-float fps = 60;
+float fps = 60;  
+
+int[] fill = {255,255,255}; // color of the spokes
+int[] background = {0,0,0}; // background color
 
 int[] locOffset = {0,0};
 int[] center = {0,0};

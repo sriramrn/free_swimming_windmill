@@ -22,7 +22,7 @@ void setup() {
   center[0] = (width/2)+locOffset[0];
   center[1] = (height/2)+locOffset[1];
   
-  windmill(center,r,a,n,w,0,255);
+  windmill(center,r,a,n,w,background,fill);
   
   sumduration = arrSum(segmentduration)*1000; // total duration of a segment in milliseconds
   numblocks = segmentduration.length;

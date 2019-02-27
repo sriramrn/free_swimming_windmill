@@ -58,7 +58,7 @@ void draw() {
     
     a += s*gain;
 
-    windmill(center,r,a,n,w,0,255);
+    windmill(center,r,a,n,w,background,fill);
   
   }
   
